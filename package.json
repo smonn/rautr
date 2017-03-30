@@ -21,5 +21,18 @@
     "build:minify": "uglifyjs --compress --source-map dist/router.min.js.map --source-map-url router.min.js.map --support-ie8 --mangle --output dist/router.min.js -- src/router.js",
     "build:copy": "cpy src/router.js dist",
     "build": "npm-run-all --serial build:minify build:copy"
+  },
+  "files": [
+    "dist/router.js",
+    "dist/router.min.js",
+    "dist/router.min.js.map",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Simon Ingeson",
+    "email": "simon.ingeson@gmail.com",
+    "url": "https://www.ingeson.se"
   }
 }

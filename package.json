@@ -20,7 +20,10 @@
     "test:watch": "karma start --auto-watch --no-single-run",
     "build:minify": "uglifyjs --compress --source-map dist/router.min.js.map --source-map-url router.min.js.map --support-ie8 --mangle --output dist/router.min.js -- src/router.js",
     "build:copy": "cpy src/router.js dist",
-    "build": "npm-run-all --serial build:minify build:copy"
+    "build": "npm-run-all --serial build:minify build:copy",
+    "preversion": "npm test",
+    "version": "npm-run-all --serial build 'git add -A dist'",
+    "postversion": "git push && git push --tags"
   },
   "files": [
     "dist/router.js",

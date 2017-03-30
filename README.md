@@ -39,3 +39,9 @@ var homeRoute = router.add(
 
 [MIT](LICENSE)
 
+## Development
+
+Clone repository and run `npm install`.
+
+- `npm test` to execute tests in browsers using Karma and Jasmine.
+- `npm build` to uglify and copy files to the dist folder.

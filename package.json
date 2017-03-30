@@ -1,6 +1,6 @@
 {
   "name": "tiny-router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tiny zero-dependency client-side routing library.",
   "devDependencies": {
     "cpy-cli": "^1.0.1",
@@ -22,7 +22,7 @@
     "build:copy": "cpy src/router.js dist",
     "build": "npm-run-all --serial build:minify build:copy",
     "preversion": "npm test",
-    "version": "npm-run-all --serial build 'git add -A dist'",
+    "version": "npm-run-all --serial build 'git add -A ./dist'",
     "postversion": "git push && git push --tags"
   },
   "files": [

@@ -1,5 +1,5 @@
 {
-  "name": "@smonn/router",
+  "name": "rautr",
   "version": "0.2.1",
   "description": "A tiny zero-dependency client-side routing library.",
   "private": false,

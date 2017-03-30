@@ -1,0 +1,25 @@
+{
+  "name": "tiny-router",
+  "version": "0.0.1",
+  "description": "A tiny zero-dependency client-side routing library.",
+  "devDependencies": {
+    "copy": "^0.3.0",
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "npm-run-all": "^4.0.2",
+    "uglify-js": "^2.8.18"
+  },
+  "scripts": {
+    "test": "karma start --single-run --no-auto-watch",
+    "test:watch": "karma start --auto-watch --no-single-run",
+    "build:minify": "uglifyjs --compress --source-map dist/router.min.js.map --source-map-url router.min.js.map --support-ie8 --mangle --output dist/router.min.js -- src/router.js",
+    "build:copy": "copy src/router.js dist",
+    "build": "npm-run-all --serial build:minify build:copy"
+  }
+}

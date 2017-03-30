@@ -1,6 +1,6 @@
 {
   "name": "tiny-router",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tiny zero-dependency client-side routing library.",
   "devDependencies": {
     "cpy-cli": "^1.0.1",
@@ -21,8 +21,9 @@
     "build:minify": "uglifyjs --compress --source-map dist/router.min.js.map --source-map-url router.min.js.map --support-ie8 --mangle --output dist/router.min.js -- src/router.js",
     "build:copy": "cpy src/router.js dist",
     "build": "npm-run-all --serial build:minify build:copy",
+    "dist:add": "git add -A ./dist",
     "preversion": "npm test",
-    "version": "npm-run-all --serial build 'git add -A ./dist'",
+    "version": "npm-run-all --serial build dist:add",
     "postversion": "git push && git push --tags"
   },
   "files": [

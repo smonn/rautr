@@ -1,5 +1,5 @@
 {
-  "name": "tiny-router",
+  "name": "@smonn/router",
   "version": "0.1.3",
   "description": "A tiny zero-dependency client-side routing library.",
   "devDependencies": {

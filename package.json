@@ -28,11 +28,7 @@
     "postversion": "git push && git push --tags"
   },
   "files": [
-    "dist/router.js",
-    "dist/router.min.js",
-    "dist/router.min.js.map",
-    "README.md",
-    "LICENSE"
+    "dist"
   ],
   "main": "dist/router.min.js",
   "license": "MIT",

@@ -22,9 +22,8 @@
     "build:minify": "uglifyjs --compress --source-map dist/router.min.js.map --source-map-url router.min.js.map --support-ie8 --mangle --output dist/router.min.js -- src/router.js",
     "build:copy": "cpy src/router.js dist",
     "build": "npm-run-all --serial build:minify build:copy",
-    "dist:add": "git add -A ./dist",
     "preversion": "npm test",
-    "version": "npm-run-all --serial build dist:add",
+    "version": "npm-run-all --serial build",
     "postversion": "git push && git push --tags"
   },
   "files": [

@@ -16,6 +16,10 @@
     "npm-run-all": "^4.0.2",
     "uglify-js": "^2.8.18"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smonn/rautr"
+  },
   "scripts": {
     "test": "karma start --single-run --no-auto-watch",
     "test:watch": "karma start --auto-watch --no-single-run",

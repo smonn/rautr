@@ -1,6 +1,6 @@
-# Tiny Router
+# rautr - tiny zero-dependency client-side router
 
-Intentionally basic client-side routing library. Does not have URL variable matching (e.g. `/user/paul` would not match `/user/:name`).
+Intentionally basic client-side routing library. Does not have URL variable matching (e.g. `/user/paul` would not match `/user/:name`). Does not rely on the HTML5 history API. Instead it only requires HashChangeEvent support, which means IE8 and above will support this library.
 
 ## Usage
 
@@ -29,10 +29,13 @@ var homeRoute = router.add(
 //router.set("#/home");
 
 // to get current route
-//router.get();
+//router.get(); // => "#/home"
 
 // to remove event listener and clean up
 //router.dispose();
+
+// check if route is matching current
+//homeRoute.isMatch(router.get()); // => true/false
 ```
 
 ## License
